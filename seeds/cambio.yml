@@ -1,0 +1,15 @@
+version: 2
+
+seeds:
+  - name: cambio
+    config:
+      column_types:
+        Mês: string
+        BRL: string
+        EUR: string
+        CNY: string
+        EGP: string
+        KRW: string
+        CLP: string
+        MXN: string
+        updated_at: datetime

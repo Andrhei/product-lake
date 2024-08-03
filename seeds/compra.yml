@@ -1,0 +1,15 @@
+version: 2
+
+seeds:
+  - name: compra
+    config:
+      column_types:
+        id: integer
+        id_cliente: integer
+        data_vencimento: string
+        data_pagamento: string
+        valor: string
+        categoria: string
+        moeda: string
+        status: string
+        updated_at: datetime
