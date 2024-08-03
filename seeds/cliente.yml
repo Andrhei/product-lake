@@ -1,0 +1,11 @@
+version: 2
+
+seeds:
+  - name: cliente
+    config:
+      column_types:
+        id: integer
+        name: string
+        pais: string
+        data nascimento: string
+        updated_at: datetime
