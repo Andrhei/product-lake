@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: cliente_bronze
+    description: "Historical exchange rate data"
+    columns:
+      - name: id
+        description: 'Customer unique identifier'
+        tests:
+          - not_null
+          - unique
+      
+      - name: nome
+        description: 'Customer name'
+        tests:
+          - not_null
+      
+      - name: pais
+        description: 'Customer country'
+        tests:
+          - not_null
+      
+      - name: data_nascimento
+        description: 'Customer date of birth'
+        tests:
+          - not_null
+      
+      - name: updated_at
+        description: 'Updated at data'
+        tests:
+          - not_null
+    
+    config:
+      column_types:
+        id: integer
+        nome: string
+        pais: string
+        data_nascimento: date
+        updated_at: datetime
+        
