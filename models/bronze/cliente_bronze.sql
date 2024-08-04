@@ -16,7 +16,7 @@ WITH cliente_bronze AS (
             )  AS DATE
         ) AS data_nascimento,
         `updated_at`,
-        ROW_NUMBER() OVER(PARTITION BY id ORDER BY updated_at DESC) AS rk
+        ROW_NUMBER() OVER(PARTITION BY `id` ORDER BY `updated_at` DESC) AS rk
     FROM {{ ref('cliente') }}
 
 )

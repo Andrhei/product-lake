@@ -48,3 +48,15 @@ models:
         description: 'Updated at data'
         tests:
           - not_null
+    
+    config:
+      column_types:
+        mes: string
+        brl: numeric
+        eur: numeric
+        cny: numeric
+        egp: numeric
+        kwr: numeric
+        clp: numeric
+        mxn: numeric
+        updated_at: datetime
