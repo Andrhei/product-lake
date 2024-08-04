@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: cambio_bronze
+    description: "Historical exchange rate data"
+    columns:
+      - name: mes
+        description: 'Reference month for the exchange rate'
+        tests:
+          - not_null
+
+      - name: brl
+        description: 'USD to BRL exchange rate'
+        tests:
+          - not_null
+      
+      - name: eur
+        description: 'USD to EUR exchange rate'
+        tests:
+          - not_null
+      
+      - name: cny
+        description: 'USD to CNY exchange rate'
+        tests:
+          - not_null
+      
+      - name: egp
+        description: 'USD to EGP exchange rate'
+        tests:
+          - not_null
+      
+      - name: kwr
+        description: 'USD to KWR exchange rate'
+        tests:
+          - not_null
+      
+      - name: clp
+        description: 'USD to CLP exchange rate'
+        tests:
+          - not_null
+      
+      - name: mxn
+        description: 'USD to MXN exchange rate'
+        tests:
+          - not_null
+      
+      - name: updated_at
+        description: 'Updated at data'
+        tests:
+          - not_null
