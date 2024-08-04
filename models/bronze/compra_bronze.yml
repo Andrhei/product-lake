@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: compra_bronze
+    description: ""
+    columns:
+      - name: id
+        description: ''
+        tests:
+          - not_null
+          - unique
+      
+      - name: id_cliente
+        description: ''
+        tests:
+          - not_null
+
+      - name: data_vencimento
+        description: ''
+        tests:
+          - not_null
+
+      - name: data_pagamento
+        description: ''
+
+      - name: valor
+        description: ''
+        tests:
+          - not_null
+
+      - name: categoria
+        description: ''
+        tests:
+          - not_null
+
+      - name: moeda
+        description: ''
+        tests:
+          - not_null
+
+      - name: status
+        description: ''
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: ''
+        tests:
+          - not_null
+    
+    config:
+      column_types:
+        id: integer
+        id_cliente: integer
+        data_vencimento: date
+        data_pagamento: date
+        valor: numeric
+        categoria: string
+        moeda: string
+        status: string
+        updated_at: datetime     
+        

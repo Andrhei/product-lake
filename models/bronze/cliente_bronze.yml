@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: cliente_bronze
-    description: "Historical exchange rate data"
+    description: ""
     columns:
       - name: id
         description: 'Customer unique identifier'
