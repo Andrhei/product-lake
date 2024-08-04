@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: cambio_silver
+    description: ""
+    columns:
+      - name: mes
+        description: ''
+        tests:
+          - not_null
+
+      - name: valor
+        description: ''
+        tests:
+          - not_null
+      
+      - name: moeda
+        description: ''
+        tests:
+          - not_null
+    
+    config:
+      column_types:
+        mes: string
+        valor: numeric
+        moeda: string
