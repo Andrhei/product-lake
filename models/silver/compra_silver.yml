@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: compra_silver
+    description: ""
+    columns:
+      - name: id_cliente
+        description: ''
+        tests:
+          - not_null
+      
+      - name: data_vencimento
+        description: ''
+        tests:
+          - not_null
+
+      - name: data_pagamento
+        description: ''
+        
+      - name: valor
+        description: ''
+        tests:
+          - not_null
+
+      - name: categoria
+        description: ''
+        tests:
+          - not_null
+
+      - name: moeda
+        description: ''
+        tests:
+          - not_null
+
+      - name: status
+        description: ''
+        tests:
+          - not_null
+
+    config:
+      column_types:
+        id_cliente: integer
+        data_vencimento: date
+        data_pagamento: date
+        valor: numeric
+        categoria: string
+        moeda: string
+        status: string
