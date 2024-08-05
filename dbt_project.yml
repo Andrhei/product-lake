@@ -45,7 +45,7 @@ models:
       schema: lake
       +materialized: table
     gold:
-      schema: lake
+      schema: marts
       +materialized: table
 
 seeds:
