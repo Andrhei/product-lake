@@ -8,7 +8,12 @@ WITH compra_silver AS (
         valor,
         categoria,
         moeda,
-        status
+        status,
+        CASE 
+            WHEN data_pagamento IS NULL
+              THEN IF(data_vencimento > CURRENT_DATE(), "PENDENTE", "ATRASO")
+            ELSE "PAGO"
+        END AS pagamento
     FROM
         {{ref('compra_bronze')}}
 )
