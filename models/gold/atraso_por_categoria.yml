@@ -1,16 +1,21 @@
 version: 2
 
 models:
-  - name: categoria_silver
+  - name: atraso_por_categoria
     description: ""
     columns:
       - name: categoria
         description: ''
         tests:
           - not_null
-          - unique
+      
+      - name: quantidade
+        description: ''
+        tests:
+          - not_null
 
     config:
       column_types:
         categoria: string
+        quantidade: integer
 

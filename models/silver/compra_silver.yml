@@ -36,6 +36,11 @@ models:
         description: ''
         tests:
           - not_null
+      
+      - name: pagamento
+        description: ''
+        tests:
+          - not_null
 
     config:
       column_types:
@@ -46,3 +51,4 @@ models:
         categoria: string
         moeda: string
         status: string
+        pagamento: string
