@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: categoria_silver
+    description: ""
+    columns:
+      - name: categoria
+        description: ''
+        tests:
+          - not_null
+          - unique
+
+    config:
+      column_types:
+        categoria: string
+
