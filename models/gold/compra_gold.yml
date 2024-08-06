@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: compra_silver
+  - name: compra_gold
     description: ""
     columns:
       - name: nome_cliente
