@@ -2,50 +2,50 @@ version: 2
 
 models:
   - name: cambio_bronze
-    description: "Historical exchange rate data"
+    description: "This table contains historical exchange rate data for various currencies against USD."
     columns:
       - name: mes
-        description: 'Reference month for the exchange rate'
+        description: 'The reference month for which the exchange rates are applicable. This field represents the period (typically in YYYY-MM format) during which the exchange rates were recorded. It is essential for time-based financial analysis and tracking historical exchange rate trends.'
         tests:
           - not_null
 
       - name: brl
-        description: 'USD to BRL exchange rate'
+        description: 'The exchange rate from USD to BRL (Brazilian Real). This field captures the rate at which USD is exchanged for BRL, providing crucial information for financial calculations involving Brazilian currency.'
         tests:
           - not_null
       
       - name: eur
-        description: 'USD to EUR exchange rate'
+        description: 'The exchange rate from USD to EUR (Euro). This field records the rate at which USD is exchanged for EUR, important for financial transactions and analysis involving the Eurozone.'
         tests:
           - not_null
       
       - name: cny
-        description: 'USD to CNY exchange rate'
+        description: 'The exchange rate from USD to CNY (Chinese Yuan). This field indicates the rate at which USD is exchanged for CNY, useful for financial dealings and trade with China.'
         tests:
           - not_null
       
       - name: egp
-        description: 'USD to EGP exchange rate'
+        description: 'The exchange rate from USD to EGP (Egyptian Pound). This field provides the rate at which USD is exchanged for EGP, relevant for transactions and financial analysis involving Egyptian currency.'
         tests:
           - not_null
       
       - name: kwr
-        description: 'USD to KWR exchange rate'
+        description: 'The exchange rate from USD to KWR (Kuwaiti Dinar). This field captures the rate at which USD is exchanged for KWR, important for financial interactions involving Kuwaiti currency.'
         tests:
           - not_null
       
       - name: clp
-        description: 'USD to CLP exchange rate'
+        description: 'The exchange rate from USD to CLP (Chilean Peso). This field records the rate at which USD is exchanged for CLP, providing key information for transactions and analysis involving Chilean currency.'
         tests:
           - not_null
       
       - name: mxn
-        description: 'USD to MXN exchange rate'
+        description: 'The exchange rate from USD to MXN (Mexican Peso). This field indicates the rate at which USD is exchanged for MXN, crucial for financial dealings and reporting involving Mexican currency.'
         tests:
           - not_null
       
       - name: updated_at
-        description: 'Updated at data'
+        description: 'The timestamp of the last update to the exchange rate data. This field tracks when the exchange rate information was last modified, which is important for ensuring the currency rates are current and accurate.'
         tests:
           - not_null
     

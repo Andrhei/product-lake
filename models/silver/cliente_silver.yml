@@ -2,21 +2,21 @@ version: 2
 
 models:
   - name: cliente_silver
-    description: ""
+    description: "Table containing detailed client information"
     columns:
       - name: id
-        description: ''
+        description: 'Unique identifier for the client'
         tests:
           - unique
           - not_null
       
       - name: nome
-        description: ''
+        description: 'Client name'
         tests:
           - not_null
 
       - name: nacionalidade
-        description: ''
+        description: 'Client nationality'
         tests:
           - not_null
     
