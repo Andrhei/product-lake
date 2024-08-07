@@ -19,9 +19,4 @@ models:
         description: 'Client nationality'
         tests:
           - not_null
-    
-    config:
-      column_types:
-        id: integer
-        nome: string
-        nacionalidade: string
+          

@@ -2,6 +2,7 @@
 
 WITH compra_bronze AS (
     SELECT
+        id,
         id_cliente,
         data_vencimento,
         data_pagamento,
@@ -32,6 +33,7 @@ cliente_silver AS (
     FROM {{ref('cliente_silver')}}
 )
 SELECT 
+    compra.id,
     cliente.nome AS nome_cliente,
     cliente.nacionalidade AS nacionalidade_cliente,
     compra.data_vencimento,
