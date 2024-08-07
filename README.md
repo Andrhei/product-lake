@@ -98,3 +98,35 @@ This DBT (Data Build Tool) project contains a series of models designed for fina
   - `status_compra`: Current status of the purchase (e.g., "PENDENTE", "ATRASO", "PAGO").
   - `data_atualizacao_compra`: Timestamp of the last purchase update.
 
+## Data Quality
+
+### Data Quality Tests
+
+To ensure the integrity and accuracy of the data in the DBT project models, we implemented a series of data quality tests. These tests are essential for identifying and correcting issues that could compromise analyses and decisions based on this data.
+
+#### 1. Duplicate Testing
+
+Duplicates in data can lead to incorrect analyses and misleading results. To avoid this, we perform duplicate tests on several critical tables in the project.
+
+- **cliente_bronze**: We test for duplicates in the `id` column, which should be unique for each customer.
+- **compra_bronze**: We test for duplicates in the `id` column, which should be unique for each purchase.
+
+#### 2. Date Format Testing
+
+Incorrect date formats can cause failures in data transformations and analyses. We verify that the date columns are in the expected format.
+
+- **cliente_bronze**: The `data_nascimento` column should be in the `YYYY-MM-DD` format.
+- **compra_bronze**: The `data_vencimento` and `data_pagamento` columns should be in the `YYYY-MM-DD` format.
+
+#### 3. Not Null Column Testing
+
+Columns that cannot contain null values are critical to maintaining data integrity. We ensure these columns contain valid values in all rows.
+
+- **cliente_bronze**: The `id`, `nome`, `pais`, `data_nascimento`, and `updated_at` columns cannot contain null values.
+- **compra_bronze**: The `id`, `id_cliente`, `data_vencimento`, `valor`, `categoria`, `moeda`, `status`, and `updated_at` columns cannot contain null values.
+
+#### 4. Accepted Values Testing
+
+Some columns must contain only values within a specific set of options. We check that the values in these columns are valid.
+
+- **compra_bronze**: The `status` column should contain only the values "PENDING", "LATE", or "PAID".
