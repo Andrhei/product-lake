@@ -2,31 +2,31 @@ version: 2
 
 models:
   - name: cliente_bronze
-    description: ""
+    description: "This table contains detailed information about customers, including personal and demographic data."
     columns:
       - name: id
-        description: 'Customer unique identifier'
+        description: 'A unique identifier assigned to each customer. This field ensures that each customer can be distinctly identified.'
         tests:
           - not_null
           - unique
       
       - name: nome
-        description: 'Customer name'
+        description: 'The full name of the customer. This field captures the customer name as provided during registration or data entry.'
         tests:
           - not_null
       
       - name: pais
-        description: 'Customer country'
+        description: 'The country where the customer resides. This field records the customer country of residence.'
         tests:
           - not_null
       
       - name: data_nascimento
-        description: 'Customer date of birth'
+        description: 'The customer date of birth. It is a crucial piece of personal information.'
         tests:
           - not_null
       
       - name: updated_at
-        description: 'Updated at data'
+        description: 'The timestamp of the last update to the customer record. This field tracks when the customer information was last modified, which is important for auditing purposes and ensuring data accuracy.'
         tests:
           - not_null
     
@@ -37,4 +37,3 @@ models:
         pais: string
         data_nascimento: date
         updated_at: datetime
-        

@@ -2,49 +2,49 @@ version: 2
 
 models:
   - name: compra_bronze
-    description: ""
+    description: "This table contains detailed information about purchases made by clients."
     columns:
       - name: id
-        description: ''
+        description: 'A unique identifier for each purchase. This field ensures that each purchase record can be distinctly.'
         tests:
           - not_null
           - unique
       
       - name: id_cliente
-        description: ''
+        description: 'The unique identifier for the client associated with the purchase.'
         tests:
           - not_null
 
       - name: data_vencimento
-        description: ''
+        description: 'The due date for the payment of the purchase. This field indicates when the payment for the purchase is expected or was originally due. It is important for tracking overdue payments and managing financial deadlines.'
         tests:
           - not_null
 
       - name: data_pagamento
-        description: ''
+        description: 'The actual date when the payment for the purchase was made. This field records the payment date and is used to track payment history and calculate any delays or penalties.'
 
       - name: valor
-        description: ''
+        description: 'The total amount of the purchase. This field records the monetary value of the purchase, which is used for financial calculations, reporting, and analysis. It is a key metric for assessing the value of transactions.'
         tests:
           - not_null
 
       - name: categoria
-        description: ''
+        description: 'The category of the purchase. This field classifies the purchase into a specific category or type (e.g., perfumaria, eletronicos). It helps in organizing and analyzing purchase data based on different classifications.'
         tests:
           - not_null
 
       - name: moeda
-        description: ''
+        description: 'The currency used for the purchase. This field specifies the type of currency (e.g., BRL, EUR) in which the purchase was made. It is important for accurate financial reporting and currency conversion.'
         tests:
           - not_null
 
       - name: status
-        description: ''
+        description: 'The current status of the purchase. This field indicates whether the purchase is pending, completed, or canceled. It helps in tracking the progress of the purchase and managing the overall purchase workflow.'
         tests:
           - not_null
 
       - name: updated_at
-        description: ''
+        description: 'The timestamp of the last update to the purchase record. This field tracks when the purchase record was last modified, which is useful for auditing and maintaining up-to-date information.'
         tests:
           - not_null
     
@@ -59,4 +59,3 @@ models:
         moeda: string
         status: string
         updated_at: datetime     
-        

@@ -2,20 +2,20 @@ version: 2
 
 models:
   - name: cambio_silver
-    description: ""
+    description: "This table contains detailed information about currency exchange rates."
     columns:
       - name: mes
-        description: ''
+        description: 'The month for which the exchange rate is applicable. This field is used to specify the period  during which the exchange rate value was recorded or is valid.'
         tests:
           - not_null
 
       - name: valor
-        description: ''
+        description: 'The exchange rate value. This field captures the numeric value of the currency exchange rate for the specified month and currency. It is essential for financial calculations.'
         tests:
           - not_null
       
       - name: moeda
-        description: ''
+        description: 'The currency code. This field specifies the type of currency (e.g., BRL, EUR) for which the exchange rate value is provided.'
         tests:
           - not_null
     

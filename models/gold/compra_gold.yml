@@ -2,58 +2,63 @@ version: 2
 
 models:
   - name: compra_gold
-    description: ""
+    description: "Table containing detailed purchase information"
     columns:
       - name: nome_cliente
-        description: ''
+        description: 'Name of the client'
         tests:
           - not_null
       
       - name: nacionalidade_cliente
-        description: ''
+        description: 'Nationality of the client'
         tests:
           - not_null
 
       - name: data_vencimento
-        description: ''
+        description: 'Due date for the payment'
         tests:
           - not_null
 
       - name: data_pagamento
-        description: ''
+        description: 'Actual payment date'
 
       - name: valor_compra
-        description: ''
+        description: 'Total purchase amount'
         tests:
           - not_null
 
       - name: valor_cambio_referencia
-        description: ''
+        description: 'Reference exchange rate value'
         tests:
           - not_null
 
       - name: valor_compra_dolar
-        description: ''
+        description: 'Purchase amount in dollars'
         tests:
           - not_null
 
       - name: categoria
-        description: ''
+        description: 'Category of the purchase'
         tests:
           - not_null
 
       - name: moeda
-        description: ''
+        description: 'Currency used in the purchase'
         tests:
           - not_null
 
       - name: status_compra
-        description: ''
+        description: 'Current status of the purchase'
         tests:
           - not_null
+          - accepted_values:
+              values:
+                - "PENDENTE"
+                - "ATRASO"
+                - "PAGO"
 
       - name: data_atualizacao_compra
-        description: ''
+        description: 'Timestamp of the last purchase update'
         tests:
           - not_null
           
@@ -70,4 +75,3 @@ models:
         moeda: string
         status_compra: string
         data_atualizacao_compra: datetime
-

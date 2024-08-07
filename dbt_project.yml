@@ -40,10 +40,10 @@ models:
     # Applies to all files under models/example/
     bronze:
       schema: bronze
-      +materialized: table
+      +materialized: view
     silver:
       schema: silver
-      +materialized: table
+      +materialized: view
     gold:
       schema: gold
       +materialized: table
