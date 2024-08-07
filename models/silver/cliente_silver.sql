@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-WITH cambio_silver AS (
+WITH cliente_silver AS (
     SELECT
         id,
         nome,
@@ -10,5 +10,5 @@ WITH cambio_silver AS (
 )
 SELECT 
     *
-FROM cambio_silver
+FROM cliente_silver
 ORDER BY id ASC
