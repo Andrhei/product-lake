@@ -4,6 +4,12 @@ models:
   - name: compra_gold
     description: "Table containing detailed purchase information"
     columns:
+      - name: id
+        description: 'Unique identifier for the compra'
+        tests:
+          - unique
+          - not_null
+
       - name: nome_cliente
         description: 'Name of the client'
         tests:
@@ -62,16 +68,3 @@ models:
         tests:
           - not_null
           
-    config:
-      column_types:
-        nome_cliente: string
-        nacionalidade_cliente: string
-        data_vencimento: date
-        data_pagamento: date
-        valor_compra: numeric
-        valor_cambio_referencia: numeric
-        valor_compra_dolar: numeric
-        categoria: string
-        moeda: string
-        status_compra: string
-        data_atualizacao_compra: datetime

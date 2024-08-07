@@ -4,6 +4,12 @@ models:
   - name: compra_silver
     description: "Table containing detailed purchase information"
     columns:
+      - name: id
+        description: 'Unique identifier for the compra'
+        tests:
+          - unique
+          - not_null
+
       - name: nome_cliente
         description: 'Name of the client'
         tests:
@@ -64,6 +70,7 @@ models:
           
     config:
       column_types:
+        id: integer
         nome_cliente: string
         nacionalidade_cliente: string
         data_vencimento: date
