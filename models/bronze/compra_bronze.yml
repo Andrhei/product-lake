@@ -14,6 +14,9 @@ models:
         description: 'The unique identifier for the client associated with the purchase.'
         tests:
           - not_null
+          - relationships:
+              field: id
+              to: ref('cliente_bronze')
 
       - name: data_vencimento
         description: 'The due date for the payment of the purchase. This field indicates when the payment for the purchase is expected or was originally due. It is important for tracking overdue payments and managing financial deadlines.'
